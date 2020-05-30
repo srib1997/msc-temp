@@ -1,0 +1,22 @@
+{
+  "name": "msc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@serialport/parser-readline": "^9.0.0",
+    "knex": "^0.21.1",
+    "pg": "^8.2.1",
+    "serialport": "^9.0.0"
+  },
+  "scripts": {
+    "lint": "standard",
+    "db:dev:migrate:create": "NODE_ENV=development knex migrate:make",
+    "db:dev:migrate": "NODE_ENV=development knex migrate:latest",
+    "db:dev:rollback": "NODE_ENV=development knex migrate:rollback",
+    "db:dev:up": "NODE_ENV=development knex migrate:up",
+    "db:dev:down": "NODE_ENV=development knex migrate:down",
+    "db:dev:seed:create": "NODE_ENV=development knex seed:make",
+    "db:dev:seed": "NODE_ENV=development knex seed:run"
+  }
+}
