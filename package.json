@@ -6,11 +6,17 @@
   "dependencies": {
     "@serialport/parser-readline": "^9.0.0",
     "knex": "^0.21.1",
+    "next": "^9.4.4",
     "pg": "^8.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "serialport": "^9.0.0"
   },
   "scripts": {
     "lint": "standard",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "db:dev:migrate:create": "NODE_ENV=development knex migrate:make",
     "db:dev:migrate": "NODE_ENV=development knex migrate:latest",
     "db:dev:rollback": "NODE_ENV=development knex migrate:rollback",
